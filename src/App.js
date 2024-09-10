@@ -9,10 +9,7 @@ import "./App.css"
 
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen)
-  }
+
 
   const [selectedCategory, setSelectedCatagory] = useState("")
 
@@ -75,12 +72,10 @@ function App() {
 
   return (
     <>
-      <div className="toggle-btn" onClick={toggleSidebar} >
-      <span style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-          &#9660;
-        </span>
+      <div className="toggle-btn"  >
+     
       </div>
-      <Sidebar isOpen={isOpen}  handleChange={handleChange} />
+      <Sidebar i handleChange={handleChange} />
       <Nav query={query} handleInputChange={handleInputChange} />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
